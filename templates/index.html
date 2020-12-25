@@ -3,9 +3,12 @@
 <head>
 	<title> Course Information Searcher</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="#" />
 	<link rel="stylesheet" type="text/css" href="static/index.css">
-	<script src="static/myscripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="static/index.js"></script>
 </head>
+
 <body>
 
 	<form action="/" method="post">
@@ -13,5 +16,11 @@
 		<input type="submit" value="Submit" id="submit_button">
 	</form>
 
+	<p id="message"></p>
 </body>
+
+<script type="text/javascript">
+	var result = '{{message}}'; // Passes result to index.js.
+</script>
+
 </html>
