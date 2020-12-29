@@ -7,7 +7,12 @@ $(document).ready(function() {
 		var result_message = "";
 		for (item in json){
 			if (item !== "status"){
-				result_message += "<b>" + item + ":</b> " + json[item] + "<br><br>";
+				if (item === "Course"){
+					result_message += "<span class='firstLine'> <b>" + item + ":</b> " + json[item] + "</span><br><br>";
+				}
+				else{
+					result_message += "<b>" + item + ":</b> " + json[item] + "<br><br>";
+				}
 			}
 		}
 
