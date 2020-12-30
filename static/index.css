@@ -1,5 +1,8 @@
 /*Colours:
-#00204E - Dark blue
+#00204E - Dark Blue
+#0066CC - Semi-Dark Blue
+#0066FF - Medium Blue
+#0099FF - Light Blue
 #FFFFFF - White
 */
 
@@ -16,25 +19,40 @@ h1 {
 
 /*Search bar
 -----------------------------------*/
-form{
+form {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-#course{
+#course {
   width: 50%;
-  padding-right: 50px;
-  text-align: 20px;
+  padding: 0 50px 0 14px;
 }
 
-#search_button{
-  margin-left: -50px;
+#search_button {
+  margin-left: -66px;
   padding-left: 12px;
   padding-right: 12px;
+  background-color: #0099FF;
+  transition: 0.3s;
 }
 
-#course, #search_button{
+#course, #search_button {
   border-radius: 20px;
   border: none;
+  height: 36px;
+}
+
+#course:focus, #search_button:focus {
+  outline: 0;
+}
+
+#search_button:hover {
+  background-color: #0066FF;
+  cursor: pointer;
+}
+
+#search_button:active {
+  background-color: #0066CC;
 }
