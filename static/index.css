@@ -16,8 +16,25 @@ h1 {
 
 /*Search bar
 -----------------------------------*/
-.search-bar{
+form{
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+#course{
+  width: 50%;
+  padding-right: 50px;
+  text-align: 20px;
+}
+
+#search_button{
+  margin-left: -50px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#course, #search_button{
+  border-radius: 20px;
+  border: none;
 }
