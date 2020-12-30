@@ -13,3 +13,11 @@ h1 {
   text-align: center;
   color: #FFFFFF;
 }
+
+/*Search bar
+-----------------------------------*/
+.search-bar{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
