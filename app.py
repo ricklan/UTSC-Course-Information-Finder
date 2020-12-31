@@ -26,7 +26,8 @@ def index():
             course["status"] = 200
             message = json.dumps(course)
             return render_template('index.html', message=message)
-        except:
+        except Exception as e:
+            print(e)
             message = json.dumps({"message": "We could not find the inputted course. Please try again.", "status":404})
             return render_template('index.html', message=message)
 
