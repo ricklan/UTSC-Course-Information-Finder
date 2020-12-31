@@ -14,7 +14,9 @@ html {
 
 h1 {
   text-align: center;
-  color: #FFFFFF;
+  color: #E8E8E8;
+  font-weight: normal;
+  font-family: Merriweather;
 }
 
 /*Search bar
@@ -26,7 +28,7 @@ form {
 }
 
 #course {
-  width: 50%;
+  width: 60%;
   padding: 0 50px 0 14px;
 }
 
@@ -55,4 +57,20 @@ form {
 
 #search_button:active {
   background-color: #0066CC;
+}
+
+/*Course Information
+-----------------------------------*/
+#message {
+  font-family: Roboto;
+  font-weight: 300;
+  background-color: #0D3E86;
+  border-radius: 20px;
+  color: #E8E8E8;
+  padding: 20px 20px 10px 20px;
+  hyphens: none;
+}
+
+#message b{
+  font-weight: 500;
 }
