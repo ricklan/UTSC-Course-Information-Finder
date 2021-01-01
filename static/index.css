@@ -4,6 +4,7 @@
 #0066FF - Medium Blue
 #0099FF - Light Blue
 #FFFFFF - White
+#F1F1F1 - Light Grey
 */
 
 /*Global Styles
@@ -14,9 +15,11 @@ html {
 
 h1 {
   text-align: center;
-  color: #E8E8E8;
+  color: #F1F1F1;
   font-weight: normal;
   font-family: Merriweather;
+  padding-bottom: 50px;
+  padding-top: 30px;
 }
 
 /*Search bar
@@ -66,15 +69,36 @@ form {
   font-weight: 300;
   background-color: #0D3E86;
   border-radius: 20px;
-  color: #E8E8E8;
+  color: #F1F1F1;
   padding: 20px 20px 10px 20px;
   hyphens: none;
 }
 
-#message:empty{
+#message:empty {
   display: none;
 }
 
-#message b{
+#message b {
   font-weight: 500;
+}
+
+/*Responsive
+-----------------------------------*/
+
+@media screen and (min-width: 800px) {
+  #course {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.2em;
+  }
 }
