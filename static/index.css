@@ -71,6 +71,10 @@ form {
   hyphens: none;
 }
 
+#message:empty{
+  display: none;
+}
+
 #message b{
   font-weight: 500;
 }
