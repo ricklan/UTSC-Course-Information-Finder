@@ -10,6 +10,9 @@ $(document).ready(function() {
 				if (item === "Course"){
 					result_message += "<span class='firstLine'>" + json[item] + "</span><br><br>";
 				}
+				else if (item == "Description"){
+					result_message += json[item] + "<br><br>";
+				}
 				else{
 					result_message += "<b>" + item + ":</b> " + json[item] + "<br><br>";
 				}
