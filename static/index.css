@@ -1,0 +1,135 @@
+/*Colours:
+#00204E - Dark Blue
+#0D3E86 - Slightly Lighter Dark Blue
+#0066CC - Semi-Dark Blue (Button Pressed)
+#0066FF - Medium Blue (Button hover)
+#0099FF - Light Blue
+#FFFFFF - White
+#F1F1F1 - Light Grey
+*/
+
+/*Global Styles
+-----------------------------------*/
+html {
+  background-color: #00204E;
+}
+
+h1 {
+  text-align: center;
+  color: #F1F1F1;
+  font-weight: normal;
+  font-family: Merriweather;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+/*Search bar
+-----------------------------------*/
+form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#course {
+  width: 60%;
+  padding: 0 50px 0 14px;
+  background-color: #0D3E86;
+  color: #F1F1F1;
+}
+
+#course:hover{
+  color: #F1F1F1;
+  background-color: #174B97;
+}
+
+/*Borrowed from: https://www.w3schools.com/howto/howto_css_placeholder.asp*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F1F1F1;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #F1F1F1;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #F1F1F1;
+}
+
+#search_button {
+  margin-left: -66px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #0099FF;
+  color: #00204E;
+  transition: 0.3s;
+}
+
+#course, #search_button {
+  border-radius: 20px;
+  border: none;
+  height: 36px;
+}
+
+#course:focus, #search_button:focus {
+  outline: 0;
+}
+
+#search_button:hover {
+  background-color: #0066FF;
+  color: #F1F1F1;
+  cursor: pointer;
+}
+
+#search_button:active {
+  background-color: #0066CC;
+  color: #F1F1F1;
+}
+
+/*Course Information
+-----------------------------------*/
+#message {
+  font-family: Roboto;
+  font-weight: 300;
+  hyphens: none;
+  background-color: #0D3E86;
+  border-radius: 20px;
+  color: #F1F1F1;
+  padding: 20px;
+  margin: 35px;
+}
+
+#message:empty {
+  display: none;
+}
+
+#message b {
+  font-weight: 500;
+}
+
+.firstLine{
+  font-weight: 400;
+  font-size: 1.6em;
+}
+
+/*Responsive
+-----------------------------------*/
+
+@media screen and (min-width: 800px) {
+  #course {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  #message {
+    margin: 25px;
+  }
+}
