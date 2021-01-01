@@ -8,7 +8,7 @@ $(document).ready(function() {
 		for (item in json){
 			if (item !== "status"){
 				if (item === "Course"){
-					result_message += "<span class='firstLine'> <b>" + item + ":</b> " + json[item] + "</span><br><br>";
+					result_message += "<span class='firstLine'>" + json[item] + "</span><br><br>";
 				}
 				else{
 					result_message += "<b>" + item + ":</b> " + json[item] + "<br><br>";
@@ -24,4 +24,3 @@ $(document).ready(function() {
 		}
 	}
 });
-
