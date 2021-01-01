@@ -1,7 +1,8 @@
 /*Colours:
 #00204E - Dark Blue
-#0066CC - Semi-Dark Blue
-#0066FF - Medium Blue
+#0D3E86 - Slightly Lighter Dark Blue
+#0066CC - Semi-Dark Blue (Button Pressed)
+#0066FF - Medium Blue (Button hover)
 #0099FF - Light Blue
 #FFFFFF - White
 #F1F1F1 - Light Grey
@@ -33,6 +34,27 @@ form {
 #course {
   width: 60%;
   padding: 0 50px 0 14px;
+  background-color: #0D3E86;
+  color: #F1F1F1;
+}
+
+#course:hover{
+  color: #F1F1F1;
+  background-color: #174B97;
+}
+
+/*Borrowed from: https://www.w3schools.com/howto/howto_css_placeholder.asp*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F1F1F1;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #F1F1F1;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #F1F1F1;
 }
 
 #search_button {
@@ -88,12 +110,6 @@ form {
 @media screen and (min-width: 800px) {
   #course {
     width: 50%;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  h1 {
-    font-size: 1.5em;
   }
 }
 
