@@ -16,9 +16,13 @@ def index():
         url = "https://utsc.calendar.utoronto.ca/course/" + inputted_course + "H3"
 
         try:
-            course = {'Course': inputted_course.upper()}
+            if (requests.get(url).request.url == "https://utsc.calendar.utoronto.ca/sorry-course-has-been-retired-and-no-longer-offered"):
+                message = json.dumps({"message": "We could not find the inputted course. Please try again.", "status":404})
+                return render_template('index.html', message=message)
+            course = {}
             text = requests.get(url).text
             soup = BeautifulSoup(text, "html5lib")
+            course["Course"] = soup.find_all("h1", {"class": "title"})[0].text.strip()
             course["Description"] = soup.find_all("div", {"class": "field-item even"})[0].text.strip()
             course["Prerequiste"] = soup.find_all("div", {"class": "field-item even"})[1].text.strip()
             course["Exclusion"] = soup.find_all("div", {"class": "field-item even"})[2].text.strip()
@@ -28,7 +32,7 @@ def index():
             return render_template('index.html', message=message)
         except Exception as e:
             print(e)
-            message = json.dumps({"message": "We could not find the inputted course. Please try again.", "status":404})
+            message = json.dumps({"message": "There was an error. The error is " + e, "status":400})
             return render_template('index.html', message=message)
 
     return render_template('index.html')
